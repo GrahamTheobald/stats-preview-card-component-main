@@ -108,15 +108,21 @@ p {
     body {
         text-align: center;
     }
-    .text-container, .image-container {
-        flex: 100%;
+     
+    .image-container {
+        flex-shrink: 0
+    }
+
+    .text-container {
+        flex: 1;
     }
 
     .container {
         flex-direction: column-reverse;
         flex-basis: var(--max-Width-b);
-        max-height: 90vh;
         min-width: 25rem;
+        max-height: 90vh;
+        overflow: hidden;
     }
 
     .image-container > img , .image-overlay {
@@ -125,6 +131,7 @@ p {
 
     .stats {
         flex-direction: column;
+        gap: 1rem;
     }
 
 }
